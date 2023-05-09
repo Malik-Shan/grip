@@ -81,6 +81,8 @@ body{
         /// NAVBAR //
 //////////////////////////// */
 header{
+    position:sticky;
+    top:0;
 	background-color:var(--clr-white-0);
     box-shadow:0 -10px 20px var(--clr-white-500);
 }
@@ -148,6 +150,7 @@ nav{
 .nav_list{
 	display:flex;
 	align-items: stretch;
+    gap:10px;
 	list-style:none;
 }
 .nav_link{
@@ -159,7 +162,31 @@ nav{
     height:100%;
     font-weight:500;
 }
-
+.nav_link > i{
+    margin-left:8px;
+}
+/* /////////////////////
+     Date/Event
+//////////////////// */
+.event_date{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin-top:1rem;
+}
+.event_date > *{
+    padding:.3em .6em;
+    color:white;
+}
+.event_date h3 > span{
+    margin-left:10px;
+    font-weight:500;
+}
+.event_date h3:nth-last-child(1){
+    background-color:rgb(255, 110, 110);
+}
+.event_date h3:nth-last-child(2){
+    background-color:rgb(57, 218, 110);
+}
 .container{
     --container-padding:1.5rem;
     padding-right:var(--container-padding);
@@ -180,6 +207,9 @@ nav{
 @media (min-width:768px){
     .container{
         max-width:720px;
+    }
+    .event_date{
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media (min-width:992px){
