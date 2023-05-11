@@ -173,7 +173,9 @@ nav{
     grid-template-columns: 1fr;
     margin-top:1rem;
 }
-.event_date > *{
+.event_date > h3{
+    position:relative;
+    cursor: pointer;
     padding:.3em .6em;
     color:white;
 }
@@ -181,11 +183,44 @@ nav{
     margin-left:10px;
     font-weight:500;
 }
-.event_date h3:nth-last-child(1){
+.event_date h3:first-child{
+    background-color:rgb(57, 218, 110);
+}
+.event_date h3:last-child{
     background-color:rgb(255, 110, 110);
 }
-.event_date h3:nth-last-child(2){
-    background-color:rgb(57, 218, 110);
+.event_date h3::before{
+    --time: 200ms;
+    color:white;
+    position:absolute;
+    font-size:.8em;
+    font-weight:400;
+    text-transform: capitalize;
+    text-align:center;
+    padding:.4em;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    border-radius:5px;
+    background-color:hsl(0, 0%, 0%,.3);
+    -webkit-transition: opacity var(--time) ease;
+    -moz-transition: opacity var(--time) ease;
+    -ms-transition: opacity var(--time) ease;
+    -o-transition: opacity var(--time) ease;
+    transition:  opacity var(--time) ease-out;
+    visibility:hidden;
+    opacity:0;
+}
+.event_date h3:hover::before{
+    visibility: visible;
+    opacity:1;
+}
+.event_date h3:first-child::before{
+    content:attr(data-info-today);
+}
+.event_date h3:last-child::before{
+    content:attr(data-info-next);
 }
 .container{
     --container-padding:1.5rem;
@@ -194,6 +229,17 @@ nav{
     margin-left:auto;
     margin-right:auto;
     width:100%;
+}
+
+/* /////////////////
+      Footer
+//////////////// */
+footer{
+    background-color:var(--clr-white-500);
+    text-align:center;
+    color:white;
+    padding: .2em 0;
+    font-size:.9em;
 }
 
 /* Device that can support hover */
@@ -228,7 +274,7 @@ nav{
     }
 }
 /* User preference */
-@media (prefers-reduced-motion: reduce){
+/* @media (prefers-reduced-motion: reduce){
     *,
     *::after,
     *::before{
@@ -238,4 +284,4 @@ nav{
         scroll-behavior:auto !important;
         transition-delay:0ms !important;
     }
-}
+} */
