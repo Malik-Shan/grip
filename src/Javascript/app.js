@@ -6,17 +6,17 @@ const dropdownbtn = document.querySelector('.dropdown');
 const dropdownmenu = document.querySelector('.dropdown_menu');
 const dropcarret = document.querySelector('.dropdown a i');
 
-dropdownbtn.addEventListener('focus', ()  =>{
-    // const dropped = dropdownmenu.getAttribute('data-drop');
+dropdownbtn.addEventListener('click', ()  =>{
+    const dropped = dropdownmenu.getAttribute('data-drop');
     dropdownmenu.setAttribute('data-drop', true);
-    // if( dropped === 'false'){
-    //     dropdownmenu.setAttribute('data-drop', true);
-    //     dropcarret.setAttribute('data-drop', true);
-    // }
-    // else{
-    //     dropdownmenu.setAttribute('data-drop', false);
-    //     dropcarret.setAttribute('data-drop', false);
-    // }
+    if( dropped === 'false'){
+        dropdownmenu.setAttribute('data-drop', true);
+        dropcarret.setAttribute('data-drop', true);
+    }
+    else{
+        dropdownmenu.setAttribute('data-drop', false);
+        dropcarret.setAttribute('data-drop', false);
+    }
 })
 fetch("../../data.json")
 .then(res => res.json())
