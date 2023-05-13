@@ -82,6 +82,7 @@ body{
 //////////////////////////// */
 header{
     position:sticky;
+    z-index:1;
     top:0;
 	background-color:var(--clr-white-0);
     box-shadow:0 -10px 20px var(--clr-white-500);
@@ -165,6 +166,21 @@ nav{
 .nav_link > i{
     margin-left:8px;
 }
+.nav_items.dropdown{
+    position:relative;
+}
+.dropdown_menu{
+    position:absolute;
+    top: 100%;
+    right:0;
+    list-style:none;
+    z-index:1;
+    background-color:var(--clr-white-500);
+}
+.dropdown_menu .dropdown_link{
+    text-decoration: none;
+    color:inherit;
+}
 /* /////////////////////
      Date/Event
 //////////////////// */
@@ -203,7 +219,7 @@ nav{
     transform:translateX(-50%);
     width:100%;
     border-radius:5px;
-    background-color:hsl(0, 0%, 0%,.3);
+    background-color:hsl(0, 0%, 0%,.5);
     -webkit-transition: opacity var(--time) ease;
     -moz-transition: opacity var(--time) ease;
     -ms-transition: opacity var(--time) ease;
@@ -212,9 +228,11 @@ nav{
     visibility:hidden;
     opacity:0;
 }
-.event_date h3:hover::before{
+@media(hover){
+    .event_date h3:hover::before{
     visibility: visible;
     opacity:1;
+}
 }
 .event_date h3:first-child::before{
     content:attr(data-info-today);
@@ -244,6 +262,16 @@ footer{
 
 /* Device that can support hover */
 @media (hover){}
+
+@media(max-width:768px){
+    .event_date h3::before{
+        position:static;
+        transform:translateX(0);
+        display:inline-block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
 /* From Samll to All the way up */
 @media (min-width:576px){
     .container{
@@ -274,7 +302,7 @@ footer{
     }
 }
 /* User preference */
-/* @media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce){
     *,
     *::after,
     *::before{
@@ -284,4 +312,4 @@ footer{
         scroll-behavior:auto !important;
         transition-delay:0ms !important;
     }
-} */
+}
