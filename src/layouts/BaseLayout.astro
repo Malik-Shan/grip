@@ -1,20 +1,31 @@
 ---
 import Head from '../components/Head.astro';
-import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 
-
-let {PageTitle} = Astro.props;
+let {page_title} = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <Head title={PageTitle}></Head>
+    <Head title={page_title}></Head>
 </head>
 <body>
     <Navbar />
-    <slot />
+    <main>
+        <section>
+            <div class="container">
+                <div class="event_date" data-schedule-noto>
+                    <h3 class="today" data-info-today="No Schedule has been provided">Today : <span data-tSubject>No Schedule Present</span></h3>
+                    <h3 class="next" data-info-next="No Schedule has been provided">Upcoming : <span data-nSubject> No Schedule Present</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <slot></slot>
+
+    </main>
     <Footer />
+    <script src="../Javascript/Search.js"></script>
 </body>
 </html>

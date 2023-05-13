@@ -4,7 +4,7 @@
 <header>
 <div class="container">
     <nav>
-        <a class="nav_logo">
+        <a class="nav_logo" href="/">
             Grip <span>Tests</span>
         </a>
         <div class="searchWrapper">
@@ -15,11 +15,12 @@
         </div>
         <div class="navigation">
             <ul class="nav_list">
-                <li class="nav_items dropdown"><a href="#" class="nav_link">Subjects<i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_item"><a href="#" class="dropdown_link">Biology</a></li>
-                        <li class="dropdown_item"><a href="#" class="dropdown_link">Biology</a></li>
-                        <li class="dropdown_item"><a href="#" class="dropdown_link">Biology</a></li>
+                <li class="nav_items dropdown"><a href="#" class="nav_link">Subjects<i data-drop="false" class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown_menu" data-drop="false" aria-labelledby="dropdown" aria-expanded="false">
+                        <li class="dropdown_item"><a href="/Biology" class="dropdown_link">Biology</a></li>
+                        <li class="dropdown_item"><a href="/Physics" class="dropdown_link">Physics</a></li>
+                        <li class="dropdown_item"><a href="/Chemistry" class="dropdown_link">Chemistry</a></li>
+                        <li class="dropdown_item"><a href="/English" class="dropdown_link">English</a></li>
                     </ul>
                 </li>
                 <li class="nav_items"><a href="/Chemistry" class="nav_link"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
