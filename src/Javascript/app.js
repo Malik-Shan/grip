@@ -6,9 +6,9 @@ const dropdownbtn = document.querySelector('.dropdown');
 const dropdownmenu = document.querySelector('.dropdown_menu');
 const dropcarret = document.querySelector('.dropdown a i');
 
-dropdownbtn.addEventListener('click', ()  =>{
+dropdownbtn.addEventListener('click', (e)  =>{
     const dropped = dropdownmenu.getAttribute('data-drop');
-    dropdownmenu.setAttribute('data-drop', true);
+    // dropdownmenu.setAttribute('data-drop', true);
     if( dropped === 'false'){
         dropdownmenu.setAttribute('data-drop', true);
         dropcarret.setAttribute('data-drop', true);
@@ -18,6 +18,35 @@ dropdownbtn.addEventListener('click', ()  =>{
         dropcarret.setAttribute('data-drop', false);
     }
 })
+document.addEventListener('click', (e)=>{
+    const closetomenu = e.target.closest('.dropdown_menu');
+    const closetobtn = e.target.closest('.dropdown');
+    // console.log(closetomenu);
+    if(closetomenu || closetobtn) return;
+    dropdownmenu.setAttribute('data-drop', false);
+        dropcarret.setAttribute('data-drop', false);
+});
+
+// 2nd dropdown for setting
+const dropdownbtn2 = document.querySelector('.dropdown2');
+const dropdownmenu2 = document.querySelector('.dropdown_menu2');
+
+dropdownbtn2.addEventListener('click', (e)  =>{
+    const dropped = dropdownmenu2.getAttribute('data-drop');
+    if(dropped === 'false'){
+        dropdownmenu2.setAttribute('data-drop', true);
+    }
+    else{
+        dropdownmenu2.setAttribute('data-drop', false);
+    }
+})
+document.addEventListener('click', (e)=>{
+    const closetomenu = e.target.closest('.dropdown_menu2');
+    const closetobtn = e.target.closest('.dropdown2');
+    if(closetomenu || closetobtn) return;
+    dropdownmenu2.setAttribute('data-drop', false);
+});
+
 fetch("../../data.json")
 .then(res => res.json())
 .then(data => showInfo(data));

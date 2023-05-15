@@ -207,6 +207,7 @@ nav{
     visibility: visible;
 }
 .dropdown_menu .dropdown_link{
+    text-align:center;
     display:block;
     border-radius:var(--inner-radius);
     text-decoration: none;
@@ -216,6 +217,36 @@ nav{
 }
 .dropdown_menu .dropdown_link:hover{
     background-color:var(--clr-white-150);
+}
+.dropdown_menu2 .dropdown_link{
+    font-size:.8em;
+    text-align:right;
+}
+.dropdown_menu2 .dropdown_link.dark-mode{
+    text-align:center;
+}
+.dropdown_menu2{
+    --inner-radius:5px;
+    --offset:.1em;
+    display:flex;
+    flex-direction:column;
+
+    position:absolute;
+    top: calc(100% + 7px);
+    right:0;
+    list-style:none;
+    z-index:1;
+
+    padding:var(--offset);
+    background-color:white;
+    box-shadow: 0 0 10px hsl(0, 0%, 0%, .2);
+    border-radius:calc(var(--offset) + var(--inner-radius));
+    transition: all 150ms ease-in;
+
+    overflow:hidden;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
 }
 /* /////////////////////
      Date/Event
