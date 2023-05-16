@@ -2,9 +2,9 @@ let copyrightYear = document.querySelector("[data-year]");
 let currentYear = new Date().getFullYear();
 copyrightYear.textContent = `${currentYear}`;
 
-const dropdownbtn = document.querySelector('.dropdown');
-const dropdownmenu = document.querySelector('.dropdown_menu');
-const dropcarret = document.querySelector('.dropdown a i');
+const dropdownbtn = document.querySelector('.dropdown1');
+const dropdownmenu = document.querySelector('.dropdown_menu1');
+const dropcarret = document.querySelector('.dropdown1 a i');
 
 dropdownbtn.addEventListener('click', (e)  =>{
     const dropped = dropdownmenu.getAttribute('data-drop');
@@ -19,8 +19,8 @@ dropdownbtn.addEventListener('click', (e)  =>{
     }
 })
 document.addEventListener('click', (e)=>{
-    const closetomenu = e.target.closest('.dropdown_menu');
-    const closetobtn = e.target.closest('.dropdown');
+    const closetomenu = e.target.closest('.dropdown_menu1');
+    const closetobtn = e.target.closest('.dropdown1');
     // console.log(closetomenu);
     if(closetomenu || closetobtn) return;
     dropdownmenu.setAttribute('data-drop', false);
