@@ -286,7 +286,7 @@ nav{
     transform:translateX(-50%);
     width:100%;
     border-radius:5px;
-    background-color:hsl(0, 0%, 0%,.5);
+    background-color:hsl(0, 0%, 0%,.7);
     -webkit-transition: opacity var(--time) ease;
     -moz-transition: opacity var(--time) ease;
     -ms-transition: opacity var(--time) ease;
@@ -317,6 +317,45 @@ nav{
 }
 
 /* /////////////////
+   Schedule Table
+///////////////// */
+table{
+    --table-border:2px solid white;
+    margin:1.5em 0;
+}
+th{
+    padding:.4em;
+    color:white;
+    background-color:var(--clr-danger);
+    border:var(--table-border);
+}
+td{
+    color:var(--clr-black-300);
+    font-size:.85em;
+    font-weight:500;
+    padding:.4em .3em;
+    border:var(--table-border);
+    text-align:center;
+}
+td[data-cell="date"]{
+    width:10%;
+}
+td[data-cell="subject"]{
+    width:20%;
+}
+tr:nth-child(n){
+    background-color:hsl(203, 49%, 82%);
+}
+tr:nth-child(2n){
+    background-color:hsl(203, 49%, 87%);
+}
+tr.schedule_today {
+    background-color:hsl(138, 67%, 60%);
+}
+tr.schedule_today > td{
+    color:var(--clr-white-0);
+}
+/* /////////////////
       Footer
 //////////////// */
 footer{
@@ -337,6 +376,7 @@ footer{
         display:inline-block;
         visibility: visible;
         opacity: 1;
+        background-color: hsl(0, 0%, 0%, .3);
     }
 }
 /* From Samll to All the way up */

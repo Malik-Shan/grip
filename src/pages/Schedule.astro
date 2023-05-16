@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout page_title="Schedule">
+    <div class="container">
+        <table data-table style="width:100%; border-collapse:collapse;">
+            <tr>
+                <th data-cell="date">Date</th>
+                <th data-cell="subject">Subject</th>
+                <th data-cell="info">Syllabus</th>
+            </tr>
+            
+        </table>
+    </div>
+    <template>
+        <tr data-row>
+            <td data-cell="date"></td>
+            <td data-cell="subject"></td>
+            <td data-cell="info"></td>
+        </tr>
+    </template>
+    <script src="../Javascript/schedule.js"></script>
+</BaseLayout>
