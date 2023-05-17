@@ -352,8 +352,37 @@ tr:nth-child(2n){
 tr.schedule_today {
     background-color:hsl(138, 67%, 60%);
 }
+tr.schedule_today td[data-cell="info"],
+tr.schedule_today td[data-cell="date"]{
+    --clr:var(--clr-black-200);
+    position:relative;
+}
+tr.schedule_today td[data-cell="info"]::before,
+tr.schedule_today td[data-cell="date"]::before{
+    position:absolute;
+    content:'';
+    border:10px solid transparent;
+    top:50%;
+    transform: translateY(-50%);
+}
+tr.schedule_today td[data-cell="date"]::before{
+    border-left:15px solid var(--clr);
+
+    left:0;
+}
+tr.schedule_today td[data-cell="info"]::before{
+    border-right:15px solid var(--clr);
+
+    right:0;
+}
 tr.schedule_today > td{
     color:var(--clr-white-0);
+}
+tr.holiday{
+    background-color:hsl(59, 100%, 70%);
+}
+tr.eid{
+    background-color:hsl(24, 100%, 70%);
 }
 /* /////////////////
       Footer

@@ -23,6 +23,19 @@ function showInfo(data){
             today.classList.add('schedule_today');
             table.append(today);
         }
+        else if(tabledata.subject === 'PREPARATORY LEAVE'){
+            const holiday = td.querySelector('[data-row]');
+            holiday.classList.add('holiday');
+            table.append(holiday);
+        }else if(tabledata.subject === 'DUA E KHAIR'){
+            const holiday = td.querySelector('[data-row]');
+            holiday.classList.add('holiday');
+            table.append(holiday);
+        }else if(tabledata.subject === 'EID-UL-ADHA HOLIDAYS'){
+            const holiday = td.querySelector('[data-row]');
+            holiday.classList.add('eid');
+            table.append(holiday);
+        }
         else{
         table.append(td);
 
