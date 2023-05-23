@@ -319,17 +319,17 @@ nav{
 /* /////////////////
    Schedule Table
 ///////////////// */
-table{
+table.schtbl{
     --table-border:2px solid white;
     margin:1.5em 0;
 }
-th{
+.schtbl th{
     padding:.4em;
     color:white;
     background-color:var(--clr-danger);
     border:var(--table-border);
 }
-td{
+.schtbl td{
     color:var(--clr-black-300);
     font-size:.85em;
     font-weight:500;
@@ -337,52 +337,89 @@ td{
     border:var(--table-border);
     text-align:center;
 }
-td[data-cell="date"]{
+.schtbl td[data-cell="date"]{
     width:10%;
 }
-td[data-cell="subject"]{
+.schtbl td[data-cell="subject"]{
     width:20%;
 }
-tr:nth-child(n){
+.schtbl tr:nth-child(n){
     background-color:hsl(203, 49%, 82%);
 }
-tr:nth-child(2n){
+.schtbl tr:nth-child(2n){
     background-color:hsl(203, 49%, 87%);
 }
-tr.schedule_today {
+.schtbl tr.schedule_today {
     background-color:hsl(138, 67%, 60%);
 }
-tr.schedule_today td[data-cell="info"],
-tr.schedule_today td[data-cell="date"]{
+.schtbl tr.schedule_today td[data-cell="info"],
+.schtbl tr.schedule_today td[data-cell="date"]{
     --clr:var(--clr-black-200);
     position:relative;
 }
-tr.schedule_today td[data-cell="info"]::before,
-tr.schedule_today td[data-cell="date"]::before{
+.schtbl tr.schedule_today td[data-cell="info"]::before,
+.schtbl tr.schedule_today td[data-cell="date"]::before{
     position:absolute;
     content:'';
     border:10px solid transparent;
     top:50%;
     transform: translateY(-50%);
 }
-tr.schedule_today td[data-cell="date"]::before{
+.schtbl tr.schedule_today td[data-cell="date"]::before{
     border-left:15px solid var(--clr);
 
     left:0;
 }
-tr.schedule_today td[data-cell="info"]::before{
+.schtbl tr.schedule_today td[data-cell="info"]::before{
     border-right:15px solid var(--clr);
 
     right:0;
 }
-tr.schedule_today > td{
+.schtbl tr.schedule_today > td{
     color:var(--clr-white-0);
 }
-tr.holiday{
+.schtbl tr.holiday{
     background-color:hsl(59, 100%, 70%);
 }
-tr.eid{
+.schtbl tr.eid{
     background-color:hsl(24, 100%, 70%);
+}
+/* /////////////////
+      Paper Page
+//////////////// */
+.ppr_imgs{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
+}
+.ppr_imgs img{
+    width:100%;
+}
+/* /////////////////
+    Answer Table
+//////////////// */
+.anstbl{
+    width:100%;
+    border-collapse:collapse;
+
+    margin-top:2rem;
+    margin-bottom:1rem;
+
+    text-align:center;
+}
+.anstbl td{
+    width:calc(100% / 20);
+    border:1px solid black;
+    padding:.4em;
+}
+.anstbl .qnum{
+    font-weight:bold;
+}
+.anstbl td:nth-child(2n + 1){
+    background-color:var(--clr-white-300);
 }
 /* /////////////////
       Footer
