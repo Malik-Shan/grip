@@ -330,7 +330,34 @@ nav{
     margin-bottom:1.5rem;
 }
 .section_title{
-    color:var(--clr-black-300);
+    --_line-w:calc(50% - 100px);
+    --_line-h:1px;
+    --_line-clr:var(--clr-white-150);
+    
+    text-align:center;
+    color:var(--clr-black-400);
+    position:relative;
+}
+.section_title::before,
+.section_title::after{
+    position:absolute;
+    content:"";
+
+    height:var(--_line-h);
+    width:var(--_line-w);
+    background-color:var(--_line-clr);
+
+    top:calc(50% - (var(--_line-h) / 2));
+}
+.section_title.s::before,
+.section_title.s::after{
+    --_line-w:calc(50% - 140px);
+}
+.section_title::before{
+    left:0;
+}
+.section_title::after{
+    right:0;
 }
 .posts{
     display:grid;
@@ -348,6 +375,8 @@ nav{
     --card-br:calc(var(--pos) + var(--inner-br));
     --pos:5px;
     --inner-br:10px;
+
+    position: relative;
     border-radius:var(--card-br);
     box-shadow: 0 0 15px hsl(0, 0%, 0%, .3);
     overflow:hidden;
@@ -358,9 +387,14 @@ nav{
     aspect-ratio:3 / 4;
 }
 .post_title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
     background-color:var(--clr-danger);
     padding:.4em;
     text-align:center;
+    height:65px;
 
 }
 .post_link{
@@ -368,6 +402,11 @@ nav{
     text-decoration: none;
     text-transform: capitalize;
     color:hsl(0, 0%, 100%, .8);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 .sub_tag{
     position:relative;
@@ -400,7 +439,24 @@ nav{
     background-color:var(--clr-pink);
     z-index:2;
 }
-
+.snum{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    
+    position:absolute;
+    top:var(--pos);
+    right:var(--pos);
+    width:25px;
+    aspect-ratio: 1 / 1;
+    font-size:.78em;
+    font-weight:400;
+    text-transform: uppercase;
+    border-radius:100%;
+    color:white;
+    background-color:hsl(261, 70%, 55%);
+    z-index:2;
+}
 /* /////////////////
    Schedule Table
 ///////////////// */
