@@ -504,7 +504,7 @@ nav{
 }
 .tabs_content{
     text-align:center;
-    background-color:var(--clr-white-50);
+    background-color:var(--clr-white-100);
 }
 .tab_content{
     display:none;

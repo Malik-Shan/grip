@@ -1,6 +1,8 @@
 ---
+import SubCard from '../../components/SubCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const posts = await Astro.glob('./content/*.md');
+const tests = await Astro.glob('./content/*.md');
+console.log(tests)
 ---
 <BaseLayout page_title="Physics">
     <section class="ps">
@@ -9,60 +11,9 @@ const posts = await Astro.glob('./content/*.md');
             <!-- Posts Here  -->
             <div class="posts sub_page">
 
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                </div>
+                {tests.map((test) =>
+                        <SubCard frontmatter={test.frontmatter} url={test.url} />
+                    )}
 
             </div>
 

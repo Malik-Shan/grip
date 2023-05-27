@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
 const {frontmatter} = Astro.props;
-const {pagetitle, imagesrc, imagealt } = frontmatter;
+const {pagetitle, imgSrc, imgAlt } = frontmatter;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +25,8 @@ const {pagetitle, imagesrc, imagealt } = frontmatter;
 
         <section class="paper_section  container">
             <div class="ppr_imgs">
-                <img src={imagesrc} alt={imagealt}>
-                <img src={imagesrc} alt={imagealt}>
+                <img src={imgSrc} alt={imgAlt}>
+                <img src={imgSrc} alt={imgAlt}>
             </div>
             <table class="anstbl">
                 <tr>

@@ -1,0 +1,15 @@
+---
+const {frontmatter , url} = Astro.props;
+const {subject, testDate, imgSrc, imgAlt, series, syllabus} = frontmatter;
+---
+<div class="post card sub_tag" data-sub={subject} data-date={testDate}>
+    <a href={url} class="post_link noto">
+        <img src={imgSrc} alt={imgAlt}>
+    </a>
+    <h4 class="post_title" title={`${subject} ${series} ${syllabus}`}>
+        <a href={url} class="post_link">
+            {subject} {series} {syllabus}
+        </a>
+    </h4>
+    <span class="snum">{series}</span>
+</div>
