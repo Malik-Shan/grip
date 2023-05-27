@@ -4,7 +4,9 @@
     
     --clr-white-0:hsl(0, 0%, 100%);
     --clr-white-50:hsl(0, 0%, 95%);
+    --clr-white-100:hsl(0, 0%, 90%);
     --clr-white-150:hsl(0, 0%, 85%);
+    --clr-white-170:hsl(0, 0%, 83%);
     --clr-white-200:hsl(0, 0%, 80%);
     --clr-white-300:hsl(0, 0%, 70%);
     --clr-white-400:hsl(0, 0%, 60%);
@@ -82,7 +84,7 @@ body{
 //////////////////////////// */
 header{
     position:sticky;
-    z-index:1;
+    z-index:100;
     top:0;
 	background-color:var(--clr-white-0);
     box-shadow:0 -10px 20px var(--clr-white-500);
@@ -92,6 +94,9 @@ nav{
 	justify-content: space-between;
 	align-items: stretch;
 	padding: 7px 20px;
+}
+.bshad{
+    box-shadow:0 0 15px var(--clr-white-300);
 }
 .nav_logo{
 	display:inline-block;
@@ -325,9 +330,15 @@ nav{
 /* /////////////////
   New Post/ Posts
 ///////////////// */
-.nps{
+.ps{
+    display:block;
     margin-top:1.5rem;
     margin-bottom:1.5rem;
+}
+.ps2{
+    display:block;
+    margin-top:2rem;
+    margin-bottom:2rem;
 }
 .section_title{
     --_line-w:calc(50% - 100px);
@@ -456,6 +467,72 @@ nav{
     color:white;
     background-color:hsl(261, 70%, 55%);
     z-index:2;
+}
+/* /////////////////
+   Tab Widdget
+///////////////// */
+.tab_wig{
+    --_tab-br:15px;
+    margin-top:1rem;
+    border-radius:var(--_tab-br);
+    overflow:hidden;
+}
+.tab_menu{
+    display:flex;
+
+    list-style:none;
+}
+.tab_items{
+    flex-grow:1;
+}
+.tab_link{
+    display:flex;
+    justify-content: center;
+    background-color:var(--clr-navyblue-300);
+    font-size:.96em;
+    font-weight: 600;
+    padding:.3em;
+    color:white;
+    text-decoration:none;
+    cursor: pointer;
+}
+.tab_link:hover{
+    background-color:var(--clr-navyblue-400);
+}
+.tab_link.active{
+    background-color:var(--clr-navyblue-500);
+}
+.tabs_content{
+    text-align:center;
+    background-color:var(--clr-white-50);
+}
+.tab_content{
+    display:none;
+    opacity:0;
+    padding:.8em;
+
+}
+.tab_content[aria-hidden="false"]{
+    display:block;
+    opacity:1;
+
+}
+.sa_btn{
+    display:inline-block;
+    text-align:center;
+    background-color:var(--clr-navyblue-300);
+    margin-top:1rem;
+    padding:.3em .5em;
+    color:white;
+    text-decoration: none;
+    font-size:.96em;
+
+}
+.sa_btn:hover{
+    background-color:var(--clr-navyblue-400);
+}
+.sa_btn:active{
+    background-color:var(--clr-navyblue-500);
 }
 /* /////////////////
    Schedule Table
