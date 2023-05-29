@@ -1,5 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SubCard from '../../components/SubCard.astro';
+import {formatTests} from '../../Javascript/util';
+const SingleSubTests = await Astro.glob('./content/*.md');
+const Tests = formatTests(SingleSubTests ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: undefined,
+});
 ---
-<BaseLayout page_title="Biology">
+<BaseLayout page_title="Physics">
+    <section class="ps">
+        <div class="container">
+            <h2 class="section_title s "> Biology Papers</h2>
+            <!-- Posts Here  -->
+            <div class="posts sub_page">
+
+                {Tests.map((test) =>
+                        <SubCard frontmatter={test.frontmatter} url={test.url} />
+                    )}
+
+            </div>
+
+        </div>
+    </section>
 </BaseLayout>

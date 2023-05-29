@@ -54,273 +54,49 @@ const LatestPosts = formatTests(AllTests ,{
                 </div>
                 <div class="tabs_content">
 
+                    <!-- Biology Pannel -->
                     <div class="tab_content active" id="bcont" aria-hidden="false" aria-labelledby="btab">
-                        Bio
                         <div class="posts">
 
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
+                            {Biology.map((test) =>
+                                <SubCard frontmatter={test.frontmatter} url={test.url} />
+                            )}
             
                         </div>
                         <a class="sa_btn" href="/Biology">Show All</a>
                     </div>
 
+                    <!-- Physics Pannel -->
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="ptab">
-                        Physics
                         <div class="posts">
 
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
+                            {Physics.map((test) =>
+                                <SubCard frontmatter={test.frontmatter} url={test.url} />
+                            )}
             
                         </div>
                         <a class="sa_btn" href="/Physics">Show All</a>
                     </div>
 
+                    <!-- Chemistyr Pannel -->
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="ctab">
-                        Chemistry
                         <div class="posts">
 
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
+                            {Chemistry.map((test) =>
+                                <SubCard frontmatter={test.frontmatter} url={test.url} />
+                            )}
             
                         </div>
                         <a class="sa_btn" href="/Chemistry">Show All</a>
                     </div>
 
+                    <!-- English Pannel -->
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="etab">
-                        English
                         <div class="posts">
 
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
-            
-                            <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                                <a href="https://www.twitter.com" class="post_link noto">
-                                    <img src="/Images/Physics/20230522_212342.jpg">
-                                </a>
-                                <h4 class="post_title">
-                                    <a href="#" class="post_link">
-                                        Physics t4 (ch2 + ch3)
-                                    </a>
-                                </h4>
-                                <span class="snum">S.1</span>
-                            </div>
+                            {English.map((test) =>
+                                <SubCard frontmatter={test.frontmatter} url={test.url} />
+                            )}
             
                         </div>
                         <a class="sa_btn" href="/English">Show All</a>

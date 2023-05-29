@@ -4,12 +4,12 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
 const {frontmatter} = Astro.props;
-const {pagetitle, imgSrc, imgAlt } = frontmatter;
+const {subject, syllabus, imgSrc1, imgSrc2, imgSrc3, imgSrc4, series} = frontmatter;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <Head title={pagetitle}></Head>
+    <Head title={`${subject} - ${syllabus} (Series - ${series}) `}></Head>
 </head>
 <body>
     <Navbar />
@@ -25,8 +25,10 @@ const {pagetitle, imgSrc, imgAlt } = frontmatter;
 
         <section class="paper_section  container">
             <div class="ppr_imgs">
-                <img src={imgSrc} alt={imgAlt}>
-                <img src={imgSrc} alt={imgAlt}>
+                <img src={imgSrc1} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
+                <img src={imgSrc2} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
+                <img src={imgSrc3} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
+                <img src={imgSrc4} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
             </div>
             <table class="anstbl">
                 <tr>

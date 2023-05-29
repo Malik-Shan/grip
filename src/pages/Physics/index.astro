@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SubCard from '../../components/SubCard.astro';
 import {formatTests} from '../../Javascript/util';
-const tests = await Astro.glob('./content/*.md');
-const PhysicsTests = formatTests(tests ,{
+const SingleSubTests = await Astro.glob('./content/*.md');
+const Tests = formatTests(SingleSubTests ,{
     filterOutDraft: true,
     sortByDate: true,
     limit: undefined,
@@ -12,11 +12,11 @@ const PhysicsTests = formatTests(tests ,{
 <BaseLayout page_title="Physics">
     <section class="ps">
         <div class="container">
-            <h2 class="section_title s ">Physics Papers</h2>
+            <h2 class="section_title s "> Physics Papers</h2>
             <!-- Posts Here  -->
             <div class="posts sub_page">
 
-                {PhysicsTests.map((test) =>
+                {Tests.map((test) =>
                         <SubCard frontmatter={test.frontmatter} url={test.url} />
                     )}
 

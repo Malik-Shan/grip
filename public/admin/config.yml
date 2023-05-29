@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'public/Images/Tests' # Folder where user uploaded files should go
+public_folder: '/Images/Tests'
+
+collections: # A list of collections the CMS should be able to edit
+  - name: 'physics' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Physics Test' # Used in the UI, ie.: "New Post"
+    slug: "{{syllabus}}"
+    folder: 'src/pages/Physics/content' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/TestPageLayout.astro"}
+      - {label: "Subject", name: "subject", widget: "hiddne", default: "Physics"}
+      - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - {}
+      

@@ -4,7 +4,7 @@ pagetitle : test1
 imgSrc: /Images/Physics/20230522_212342.jpg
 imgAlt: test image
 subject: physics
-testDate: 2023-06-22
+testDate: 2023-05-22
 series: '2'
 syllabus: Force & Motion
 ---

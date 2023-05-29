@@ -28,3 +28,9 @@ export function formatTests(tests, {
     }
     return filteredTests;
 }
+
+export function formatDate(date){
+    return new Date(date).toLocaleDateString('en-UK', {
+        timezone:'UTC',
+    })
+}
