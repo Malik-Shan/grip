@@ -617,6 +617,9 @@ table.schtbl{
 .ppr_imgs img{
     max-width:100%;
 }
+.ppr_imgs img[src=""]{
+    display:none;
+}
 /* /////////////////
     Answer Table
 //////////////// */
