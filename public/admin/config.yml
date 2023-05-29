@@ -15,5 +15,4 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hiddne", default: "Physics"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
-      - {}
       
