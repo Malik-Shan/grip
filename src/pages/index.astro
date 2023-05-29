@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SubCard from '../components/SubCard.astro';
+import {formatTests} from '../Javascript/util';
+
+const Physics = await Astro.glob('./Physics/content/*.md');
+const English = await Astro.glob('./English/content/*.md');
+const Chemistry = await Astro.glob('./Chemistry/content/*.md');
+const Biology = await Astro.glob('./Biology/content/*.md');
+const AllTests = Physics.concat(English, Chemistry, Biology);
+const LatestPosts = formatTests(AllTests ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: 5,
+});
 ---
 <BaseLayout page_title="Home">
     <section class="ps">
@@ -8,65 +21,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <!-- Posts Here  -->
             <div class="posts">
 
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                    <span class="snum">S.1</span>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                    <span class="snum">S.1</span>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                    <span class="snum">S.1</span>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                    <span class="snum">S.1</span>
-                </div>
-
-                <div class="post card sub_tag" data-sub="Physics" data-date="20-05-23">
-                    <a href="https://www.twitter.com" class="post_link noto">
-                        <img src="/Images/Physics/20230522_212342.jpg">
-                    </a>
-                    <h4 class="post_title">
-                        <a href="#" class="post_link">
-                            Physics t4 (ch2 + ch3)
-                        </a>
-                    </h4>
-                    <span class="snum">S.1</span>
-                </div>
+                {LatestPosts.map((test) =>
+                    <SubCard frontmatter={test.frontmatter} url={test.url} />
+                )}
 
             </div>
 

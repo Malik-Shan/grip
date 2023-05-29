@@ -1,8 +1,13 @@
 ---
-import SubCard from '../../components/SubCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SubCard from '../../components/SubCard.astro';
+import {formatTests} from '../../Javascript/util';
 const tests = await Astro.glob('./content/*.md');
-console.log(tests)
+const PhysicsTests = formatTests(tests ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: undefined,
+});
 ---
 <BaseLayout page_title="Physics">
     <section class="ps">
@@ -11,7 +16,7 @@ console.log(tests)
             <!-- Posts Here  -->
             <div class="posts sub_page">
 
-                {tests.map((test) =>
+                {PhysicsTests.map((test) =>
                         <SubCard frontmatter={test.frontmatter} url={test.url} />
                     )}
 
