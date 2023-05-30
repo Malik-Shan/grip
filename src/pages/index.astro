@@ -4,9 +4,29 @@ import SubCard from '../components/SubCard.astro';
 import {formatTests} from '../Javascript/util';
 
 const Physics = await Astro.glob('./Physics/content/*.md');
+const fp = formatTests(Physics ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: 5,
+});
 const English = await Astro.glob('./English/content/*.md');
+const fe = formatTests(English ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: 5,
+});
 const Chemistry = await Astro.glob('./Chemistry/content/*.md');
+const fc = formatTests(Chemistry ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: 5,
+});
 const Biology = await Astro.glob('./Biology/content/*.md');
+const fb = formatTests(Biology ,{
+    filterOutDraft: true,
+    sortByDate: true,
+    limit: 5,
+});
 const AllTests = Physics.concat(English, Chemistry, Biology);
 const LatestPosts = formatTests(AllTests ,{
     filterOutDraft: true,
@@ -58,7 +78,7 @@ const LatestPosts = formatTests(AllTests ,{
                     <div class="tab_content active" id="bcont" aria-hidden="false" aria-labelledby="btab">
                         <div class="posts">
 
-                            {Biology.map((test) =>
+                            {fb.map((test) =>
                                 <SubCard frontmatter={test.frontmatter} url={test.url} />
                             )}
             
@@ -70,7 +90,7 @@ const LatestPosts = formatTests(AllTests ,{
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="ptab">
                         <div class="posts">
 
-                            {Physics.map((test) =>
+                            {fp.map((test) =>
                                 <SubCard frontmatter={test.frontmatter} url={test.url} />
                             )}
             
@@ -82,7 +102,7 @@ const LatestPosts = formatTests(AllTests ,{
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="ctab">
                         <div class="posts">
 
-                            {Chemistry.map((test) =>
+                            {fc.map((test) =>
                                 <SubCard frontmatter={test.frontmatter} url={test.url} />
                             )}
             
@@ -94,7 +114,7 @@ const LatestPosts = formatTests(AllTests ,{
                     <div class="tab_content" id="pcont" aria-hidden="true" aria-labelledby="etab">
                         <div class="posts">
 
-                            {English.map((test) =>
+                            {fe.map((test) =>
                                 <SubCard frontmatter={test.frontmatter} url={test.url} />
                             )}
             
