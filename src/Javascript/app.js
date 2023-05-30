@@ -47,7 +47,7 @@ document.addEventListener('click', (e)=>{
     dropdownmenu2.setAttribute('data-drop', false);
 });
 
-fetch("../data.json")
+fetch("../../data.json")
 .then(res => res.json())
 .then(data => showInfo(data));
 function showInfo(data){
