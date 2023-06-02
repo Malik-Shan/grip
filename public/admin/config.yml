@@ -12,7 +12,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: 'src/pages/Physics/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/TestPageLayout.astro"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Physics"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
