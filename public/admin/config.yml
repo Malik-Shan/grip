@@ -8,15 +8,15 @@ public_folder: '/Images/Tests'
 collections: # A list of collections the CMS should be able to edit
   - name: 'physics' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Physics Test' # Used in the UI, ie.: "New Post"
-    slug: "{{syllabus}}"
+    slug: "{{testDate}}-{{syllabus}}-{{slug}}"
     folder: 'src/pages/Physics/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Physics"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
-      - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
+      - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Image # 1", name: 'imgSrc1', widget: 'image', required: false, default: ""  }
       - { label: "Image # 2", name: 'imgSrc2', widget: 'image', required: false, default: ""  }
       - { label: "Image # 3", name: 'imgSrc3', widget: 'image', required: false, default: ""  }
