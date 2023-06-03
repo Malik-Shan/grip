@@ -8,7 +8,7 @@ public_folder: '/Images/Tests'
 collections: # A list of collections the CMS should be able to edit
   - name: 'physics' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Physics Test' # Used in the UI, ie.: "New Post"
-    slug: '{{testDate}}-{{syllabus}}-{{slug}}'
+    slug: '{{testDate}}-{{syllabus}}'
     folder: 'src/pages/Physics/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -123,7 +123,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
   - name: 'chemistry' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Chemistry Test' # Used in the UI, ie.: "New Post"
-    slug: '{{testDate}}-{{syllabus}}-{{slug}}'
+    slug: '{{testDate}}-{{syllabus}}'
     folder: 'src/pages/Chemistry/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -238,7 +238,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
   - name: 'biology' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Biology Test' # Used in the UI, ie.: "New Post"
-    slug: '{{testDate}}-{{syllabus}}-{{slug}}'
+    slug: '{{testDate}}-{{syllabus}}'
     folder: 'src/pages/Biology/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -353,7 +353,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
   - name: 'english' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'English Test' # Used in the UI, ie.: "New Post"
-    slug: '{{testDate}}-{{syllabus}}-{{slug}}'
+    slug: '{{testDate}}-{{syllabus}}'
     folder: 'src/pages/English/content' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
