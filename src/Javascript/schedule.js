@@ -1,9 +1,11 @@
 const template = document.querySelector('template');
 const table = document.querySelector('[data-table]');
-fetch("../../data.json")
+fetch("/data.json")
 .then(res => res.json())
 .then(data => showInfo(data));
+
 function showInfo(data){
+    eval(data.jsondata);
     data.forEach(tabledata =>{
         const td = template.content.cloneNode(true);
         const date = td.querySelector('[data-cell="date"]')

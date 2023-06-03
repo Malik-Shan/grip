@@ -644,7 +644,7 @@ table.schtbl{
 }
 .anstbl tr{
     display:grid;
-    grid-template-columns: repeat( 20 , 1fr);
+    grid-template-columns: repeat( 10 , 1fr);
 }
 /* /////////////////
       Footer
