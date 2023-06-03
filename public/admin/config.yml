@@ -121,5 +121,14 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 98', name: 'mq98', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 99', name: 'mq99', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
+  - name: 'data' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Data' # Used in the UI, ie.: "New Post"
+    slug: 'data'
+    extension: "json"
+    format: "json"
+    folder: 'public' # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Data', name: 'jsondata', widget: 'text'}
 
       

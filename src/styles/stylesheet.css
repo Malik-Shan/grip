@@ -633,7 +633,6 @@ table.schtbl{
     text-align:center;
 }
 .anstbl td{
-    width:calc(100% / 20);
     border:1px solid black;
     padding:.4em;
 }
@@ -642,6 +641,10 @@ table.schtbl{
 }
 .anstbl td:nth-child(2n + 1){
     background-color:var(--clr-white-300);
+}
+.anstbl tr{
+    display:grid;
+    grid-template-columns: repeat( 20 , 1fr);
 }
 /* /////////////////
       Footer
