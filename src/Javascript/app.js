@@ -51,7 +51,7 @@ fetch("/data.json")
 .then(res => res.json())
 .then(data => showInfo(data));
 function showInfo(data){
-    data.forEach(info =>{
+    eval(data.jsondata).forEach(info =>{
         // schedule date formatting
         let schDate = new Date(info.date).toLocaleDateString('en-UK', {
             timezone:'UTC',
@@ -86,6 +86,7 @@ function showInfo(data){
             
             if(pDate === current){
                 scheduleInfoToday.setAttribute('data-info-today', schInfo)
+                scheduleInfoToday.setAttribute('data-series', info.series)
                 tSubject.textContent = info.subject
             }
             else if( pDate === nextDate){

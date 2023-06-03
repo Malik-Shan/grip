@@ -262,6 +262,7 @@ nav{
     margin-top:1rem;
 }
 .event_date > h3{
+    /* --_event-series-num:'-'; */
     position:relative;
     cursor: pointer;
     padding:.3em .6em;
@@ -318,6 +319,17 @@ nav{
 }
 .event_date h3:last-child::before{
     content:attr(data-info-next);
+}
+.event_date h3::after{
+    content:'Series # 'attr(data-series);
+    color:white;
+    border-radius:5px;
+    font-size:.6em;
+    font-weight:500;
+    margin-left:.8em;
+    vertical-align: middle;
+    padding:.3em;
+    background-color:var(--clr-primary);
 }
 .container{
     --container-padding:1.5rem;
