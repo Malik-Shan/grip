@@ -474,6 +474,6 @@ collections: # A list of collections the CMS should be able to edit
     folder: 'public' # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Data', name: 'jsondata', widget: 'text'}
+      - { label: 'Data', name: 'jsondata', widget: 'code'}
 
       
