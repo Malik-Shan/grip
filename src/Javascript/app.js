@@ -91,7 +91,7 @@ function showInfo(data){
             }
             else if( pDate === nextDate){
                 scheduleInfoNext.setAttribute('data-info-next', schInfo)
-                scheduleInfoToday.setAttribute('data-series', info.series)
+                scheduleInfoNext.setAttribute('data-series', info.series)
                 nSubject.textContent = info.subject
             }
         }
