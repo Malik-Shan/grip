@@ -1,6 +1,6 @@
 ---
 const {frontmatter , url} = Astro.props;
-const {subject, testDate, imgSrc1, series, syllabus} = frontmatter;
+const {subject, testDate, imgSrc1, series,test, syllabus} = frontmatter;
 import {formatDate} from '../Javascript/util';
 
 ---
@@ -10,7 +10,7 @@ import {formatDate} from '../Javascript/util';
     </a>
     <h4 class="post_title" title={`${subject} - ${syllabus} (Series - ${series})`}>
         <a href={url} class="post_link">
-            {`${subject} - ${syllabus}`}
+            {`${subject} ${test} - ${syllabus}`}
         </a>
     </h4>
     <span class="snum">{`S.${series}`}</span>
