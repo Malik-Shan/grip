@@ -4,6 +4,7 @@ subject: Chemistry
 testDate: 2023-05-08T09:00:51.601Z
 syllabus: Basic Concepts
 series: "1"
+test: 1(A)
 imgSrc1: /Images/Tests/08-05-23-1-chem-.webp
 imgSrc2: /Images/Tests/08-05-23-2-chem-.webp
 imgSrc3: ""
