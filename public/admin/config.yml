@@ -132,6 +132,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Chemistry"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: 'CMS File Name', name: 'For CMS', widget: 'string'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
@@ -248,6 +249,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Biology"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: 'CMS File Name', name: 'For CMS', widget: 'string'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
@@ -364,6 +366,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "English"}
       - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: 'CMS File Name', name: 'For CMS', widget: 'string'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
