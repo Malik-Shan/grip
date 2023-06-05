@@ -408,7 +408,7 @@ nav{
     display:block;
     max-width:100%;
     aspect-ratio:3 / 4;
-    object-fit: contain;
+    object-fit: cover;
 }
 .post_title{
     display:flex;
