@@ -2,7 +2,7 @@
 layout: ../../../layouts/TestPageLayout.astro
 subject: Chemistry
 testDate: 2023-06-05T09:00:29.188Z
-For CMS: Sr.2 T1(A) Basic Concepts 06-05-23
+For CMS: Sr.2 T1(A) Basic Concepts 05-06-23
 syllabus: Basic Concepts
 series: "2"
 test: 1(A)
