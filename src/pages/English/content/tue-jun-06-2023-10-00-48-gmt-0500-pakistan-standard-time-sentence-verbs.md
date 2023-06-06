@@ -5,7 +5,7 @@ testDate: 2023-06-06T05:00:48.825Z
 For CMS: Sr.2 T1(B) Sentence + Verbs 06-06-23
 syllabus: Sentence + Verbs
 series: "2"
-test: "1"
+test: 1(B)
 imgSrc1: /Images/Tests/06-06-23-1-eng.webp
 imgSrc2: /Images/Tests/06-06-23-2-eng.webp
 imgSrc3: ""
