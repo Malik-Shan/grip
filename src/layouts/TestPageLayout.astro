@@ -1,5 +1,6 @@
 ---
-import Head from '../components/Head.astro';
+import '../styles/stylesheet.css';
+import TestPageHead from '../components/TestPageHead.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
@@ -13,13 +14,13 @@ mq71,mq72,mq73,mq74,mq75,mq76,mq77,mq78,mq79,mq80,mq81,mq82,mq83,mq84,mq85,mq86,
 mq91,mq92,mq93,mq94,mq95,mq96,mq97,mq98,mq99,mq100} = frontmatter;
 ---
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <Head title={`${subject} - ${syllabus} (Series - ${series}) `}></Head>
+<html lang="en" >
+<head >
+    <TestPageHead title={`${subject} - ${syllabus} (Series - ${series}) `} imgSrc1={imgSrc1} syllabus={syllabus}></TestPageHead>
 </head>
-<body>
+<body >
     <Navbar />
-    <main>
+    <main data-syllabus={syllabus} data-pagefind-index-attrs="data-syllabus" >
         <section>
             <div class="container">
                 <div class="event_date" data-schedule-noto>
@@ -31,7 +32,7 @@ mq91,mq92,mq93,mq94,mq95,mq96,mq97,mq98,mq99,mq100} = frontmatter;
 
         <section class="paper_section  container">
             <div class="ppr_imgs">
-                <img src={imgSrc1} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
+                <img data-pagefind-meta="image[src]" src={imgSrc1} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
                 <img src={imgSrc2} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
                 <img src={imgSrc3} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
                 <img src={imgSrc4} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
