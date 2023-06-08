@@ -151,7 +151,6 @@ document.querySelector('#results').innerHTML = ''
 // add the new results
 for (const result of search.results) {
 const data = await result.data()
-console.log(data);
 document.querySelector('#results').innerHTML += `
 <a href="${data.url}">
   <h3>${data.meta.title}</h3>
