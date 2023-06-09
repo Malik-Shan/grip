@@ -98,3 +98,20 @@ function showInfo(data){
 
     })
 }
+
+const searchModalOpen = document.querySelector('.fsb');
+    searchModalOpen.addEventListener('click', (e)=>{
+        const modal = document.querySelector('.searchModal');
+        modal.showModal();
+
+        const closeModal = document.querySelector('.closeModal');
+        closeModal.addEventListener('click', () =>{
+            modal.close();
+        })
+    })
+window.addEventListener('keydown', (e)=>{
+    if(e.key === '/'){
+        const modal = document.querySelector('.searchModal');
+        modal.showModal();
+    }
+})

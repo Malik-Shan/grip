@@ -8,10 +8,15 @@
             Grip <span>Tests</span>
         </a>
         <div class="searchWrapper">
-            <button class="searchbtn">
-                <i class="fas fa-search"></i>
+            <button class="fsb">
+                <div class="searchbtn">
+                    <i class="fas fa-search"></i>
+                </div>
+                <span class="searchplaceholder">Search...</span>
+                <svg class="searchkeybind" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-slash" viewBox="0 0 16 16">
+                    <path d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
             </button>
-            
         </div>
         <div class="navigation">
             <ul class="nav_list">
@@ -33,5 +38,14 @@
             </ul>
         </div>
     </nav>
+    <dialog class="searchModal">
+        <span class="closeModal">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </span>
+        <input type="search" id="search" class="searchbar" placeholder="Search...">
+        <div id="results">
+        </div>
+        
+    </dialog>
 </div>
 </header>

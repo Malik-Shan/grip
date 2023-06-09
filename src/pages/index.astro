@@ -130,8 +130,7 @@ const LatestPosts = formatTests(AllTests ,{
     <script src="../Javascript/mainPage.js"></script>
 
     
-    <input type="search" id="search" class="text" placeholder="Search...">
-    <div id="results" />
+    
 
 <script is:inline>
 document.querySelector('#search')?.addEventListener('input', async (e) => {
@@ -154,7 +153,7 @@ const data = await result.data()
 document.querySelector('#results').innerHTML += `
 <a href="${data.url}">
   <h3>${data.meta.title}</h3>
-  <img src="${data.meta.img}" style="width:30px;">
+  <img src="${data.meta.image}" style="width:30px;">
   <p>${data.excerpt}</p>
 
 </a>`

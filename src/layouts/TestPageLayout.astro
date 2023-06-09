@@ -3,6 +3,7 @@ import '../styles/stylesheet.css';
 import TestPageHead from '../components/TestPageHead.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import EventDate from '../components/EventDate.astro';
 
 const {frontmatter} = Astro.props;
 const {subject, syllabus, imgSrc1, imgSrc2, imgSrc3, imgSrc4, series} = frontmatter;
@@ -18,15 +19,12 @@ mq91,mq92,mq93,mq94,mq95,mq96,mq97,mq98,mq99,mq100} = frontmatter;
 <head >
     <TestPageHead title={`${subject} - ${syllabus} (Series - ${series}) `} imgSrc1={imgSrc1} syllabus={syllabus}></TestPageHead>
 </head>
-<body >
+<body data-pagefind-body>
     <Navbar />
     <main data-syllabus={syllabus} data-pagefind-index-attrs="data-syllabus" >
         <section>
             <div class="container">
-                <div class="event_date" data-schedule-noto>
-                    <h3 class="today" data-info-today="No Schedule has been provided">Today : <span data-tSubject>No Schedule Present</span></h3>
-                    <h3 class="next" data-info-next="No Schedule has been provided">Upcoming : <span data-nSubject> No Schedule Present</span></h3>
-                </div>
+                <EventDate />
             </div>
         </section>
 
@@ -37,7 +35,7 @@ mq91,mq92,mq93,mq94,mq95,mq96,mq97,mq98,mq99,mq100} = frontmatter;
                 <img src={imgSrc3} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
                 <img src={imgSrc4} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
             </div>
-            <table class="anstbl">
+            <table class="anstbl" data-pagefind-ignore="all">
                 <tr>
                     <td class="opt">{mq1}</td>
                     <td class="opt">{mq2}</td>
