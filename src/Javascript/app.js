@@ -102,17 +102,28 @@ function showInfo(data){
 const searchModalOpen = document.querySelector('.fsb');
     searchModalOpen.addEventListener('click', (e)=>{
         const modal = document.querySelector('.searchModal');
-        modal.showModal();
+        const hidden = modal.getAttribute('aria-hidden');
+        if(hidden === 'true'){
+         modal.setAttribute('aria-hidden' , 'false');
+         modal.showModal();
+        }
 
-        const closeModal = document.querySelector('.closeModal');
+        const closeModal = document.querySelector('.closeModal i');
         closeModal.addEventListener('click', () =>{
-            modal.close();
+            const modal = document.querySelector('.searchModal');
+            const hidden = modal.getAttribute('aria-hidden');
+            if(hidden === 'false'){
+            modal.setAttribute('aria-hidden', 'true');
+             modal.close();
+
+            }
         })
     })
 // window.addEventListener('keydown', (e)=>{
 //     const modal = document.querySelector('.searchModal');
 //     modal.hasAttribute('open');
-//     if(e.key === '/'){
-//         return modal.showModal();
+//     if(e.key === '/' && modal.getAttribute('aria-hidden') === 'true'){
+//         modal.showModal();
+//         modal.setAttribute('aria-hidden', 'false');
 //     }
 // })

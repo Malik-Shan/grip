@@ -38,13 +38,13 @@
             </ul>
         </div>
     </nav>
-    <dialog class="searchModal">
+    <dialog class="searchModal" aria-hidden="true">
         <span class="closeModal">
             <i class="fa-solid fa-circle-xmark"></i>
         </span>
         <input type="search" id="search" class="searchbar" placeholder="Search...">
-        <div id="results">
-        </div>
+        <span class="resultnum"></span>
+        <div id="results" />
         
     </dialog>
 </div>

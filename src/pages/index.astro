@@ -180,18 +180,25 @@ const searchAndUpdate = debounce( async (query, find) => {
     // search index
     // console.log(query);
     const search = await find.search(query);
+    console.log(search);
     // clears prev results
     document.querySelector('#results').innerHTML = '';
+
+    // Give results number
+    const resultnum = document.querySelector('.resultnum');
+    const num = search.results.length;
+    resultnum.textContent = `Results Found (${num})`;
     // add new result
     for( const result of search.results) {
         const data = await result.data()
         document.querySelector('#results').innerHTML += `
-        <a href="${data.url}">
-        <h3>${data.meta.title}</h3>
-        <img src="${data.meta.image}" style="width:30px;">
-        <p>${data.excerpt}</p>
-        
-        </a>`
+        <div>
+            <a href="${data.url}">
+            <h3>${data.meta.title}</h3>
+            <img src="${data.meta.image}" style="width:30px;">
+            <p>${data.excerpt}</p>
+            </a>
+        </div>`
     }
 } , 500)
 // async function searchAndUpdate(query , find){
