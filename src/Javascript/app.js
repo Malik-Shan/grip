@@ -127,7 +127,7 @@ const searchModalOpen = document.querySelector('.fsb');
         let searchTimer
         // console.log(searchInput);
     
-        window.pagefind = await import ('/pagefind/pagefind.js');
+        window.pagefind = await import ('../pages/pagefind/pagefind.js');
     
         searchAndUpdate(e.target.value , window.pagefind);
     })
