@@ -90,7 +90,7 @@ const searchAndUpdate = debounce( async (query, find) => {
     }
     } else{
         document.querySelector('#results').innerHTML = `
-        <h4 style="color:var(--clr-white-transparent); margin:1em; text-align:center;">Game Not Found</h4>
+        <span class="noresultsfound"> No Results Found </span>
         `
         ;
     }
