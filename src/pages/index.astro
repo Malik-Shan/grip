@@ -181,7 +181,6 @@ const searchAndUpdate = debounce( async (query, find) => {
         // search index
     // console.log(query);
     const search = await find.search(query);
-    console.log(search);
     // clears prev results
     document.querySelector('#results').innerHTML = '';
 
