@@ -5,7 +5,7 @@ testDate: 2023-06-08T05:00:15.481Z
 For CMS: Sr.2 T2(B) Work & Energy 08-06-23
 syllabus: Work & Energy
 series: "2"
-test: "2"
+test: 2(B)
 imgSrc1: /Images/Tests/08-06-23-1-phy.webp
 imgSrc2: /Images/Tests/08-06-23-2-phy.webp
 imgSrc3: /Images/Tests/08-06-23-3-phy.webp
