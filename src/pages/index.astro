@@ -177,7 +177,8 @@ searchInput.addEventListener('input', async (e) => {
 })
 
 const searchAndUpdate = debounce( async (query, find) => {
-    // search index
+    if(query.length >= 1){
+        // search index
     // console.log(query);
     const search = await find.search(query);
     console.log(search);
@@ -199,6 +200,10 @@ const searchAndUpdate = debounce( async (query, find) => {
             <p>${data.excerpt}</p>
             </a>
         </div>`
+    }
+    } else {
+        document.querySelector('.resultnum').textContent = '';
+        document.querySelector('#results').innerHTML = '';
     }
 } , 500)
 // async function searchAndUpdate(query , find){
