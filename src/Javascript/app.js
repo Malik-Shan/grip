@@ -109,9 +109,10 @@ const searchModalOpen = document.querySelector('.fsb');
             modal.close();
         })
     })
-window.addEventListener('keydown', (e)=>{
-    if(e.key === '/'){
-        const modal = document.querySelector('.searchModal');
-        modal.showModal();
-    }
-})
+// window.addEventListener('keydown', (e)=>{
+//     const modal = document.querySelector('.searchModal');
+//     modal.hasAttribute('open');
+//     if(e.key === '/'){
+//         return modal.showModal();
+//     }
+// })

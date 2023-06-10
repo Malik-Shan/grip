@@ -133,32 +133,70 @@ const LatestPosts = formatTests(AllTests ,{
     
 
 <script is:inline>
-document.querySelector('#search')?.addEventListener('input', async (e) => {
-// only load the pagefind script once
-if (e.target.dataset.loaded !== 'true') {
-e.target.dataset.loaded = 'true'
-// load the pagefind script
-window.pagefind = await import("/pagefind/pagefind.js");
-}
+// document.querySelector('#search').addEventListener('input', async (e) => {
 
-// search the index using the input value
-const search = await window.pagefind.search(e.target.value)
+//     // only load the pagefind script once
+//     if (e.target.dataset.loaded !== 'true') {
+//     e.target.dataset.loaded = 'true'
+//     // load the pagefind script
+//     window.pagefind = await import("/pagefind/pagefind.js");
+
+//     }
+//     // search the index using the input value
+//     const dvalue = await window.pagefind.search(e.target.value);
+//     search(dvalue)
+//     console.log(dvalue);
+//     console.log(search());
+//     // clear the old results
+//     document.querySelector('#results').innerHTML = ''
+
+//     // add the new results
+//     for (const result of search.results) {
+//     const data = await result.data()
+//     document.querySelector('#results').innerHTML += `
+//     <a href="${data.url}">
+//     <h3>${data.meta.title}</h3>
+//     <img src="${data.meta.image}" style="width:30px;">
+//     <p>${data.excerpt}</p>
+    
+//     </a>`
+// }
+// })
 
 
-// clear the old results
-document.querySelector('#results').innerHTML = ''
+const searchInput = document.querySelector('#search');
 
-// add the new results
-for (const result of search.results) {
-const data = await result.data()
-document.querySelector('#results').innerHTML += `
-<a href="${data.url}">
-  <h3>${data.meta.title}</h3>
-  <img src="${data.meta.image}" style="width:30px;">
-  <p>${data.excerpt}</p>
+searchInput.addEventListener('input', async (e) => {
+    
+    let searchTimer
+    // console.log(searchInput);
 
-</a>`
-}
+    window.pagefind = await import ('/pagefind/pagefind.js');
+
+    searchAndUpdate(e.target.value , window.pagefind);
 })
+
+async function searchAndUpdate(query , find){
+    searchTimer = undefined;
+    
+    // search index
+    const search = await find.search(query);
+    // clears prev results
+    document.querySelector('#results').innerHTML = '';
+    // add new result
+    for( const result of search.results) {
+        const data = await result.data()
+        document.querySelector('#results').innerHTML += `
+        <a href="${data.url}">
+        <h3>${data.meta.title}</h3>
+        <img src="${data.meta.image}" style="width:30px;">
+        <p>${data.excerpt}</p>
+        
+        </a>`
+    }
+
+}
+
+
 </script>
 </BaseLayout>
