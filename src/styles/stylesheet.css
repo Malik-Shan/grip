@@ -223,6 +223,7 @@ nav{
 }
 .result{
     display:block;
+    height:100%;
 }
 #search{
     display:block;
