@@ -5,7 +5,7 @@ testDate: 2023-06-08T05:00:43.415Z
 For CMS: Sr.2 T2(B) Verbs-II 08-06-23
 syllabus: Verbs-II
 series: "2"
-test: "2"
+test: 2(B)
 imgSrc1: /Images/Tests/08-06-23-1-eng.webp
 imgSrc2: /Images/Tests/08-06-23-2-eng.webp
 imgSrc3: ""
