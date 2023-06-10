@@ -178,7 +178,7 @@ searchInput.addEventListener('input', async (e) => {
 
 const searchAndUpdate = debounce( async (query, find) => {
     // search index
-    console.log(query);
+    // console.log(query);
     const search = await find.search(query);
     // clears prev results
     document.querySelector('#results').innerHTML = '';
