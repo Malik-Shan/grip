@@ -190,7 +190,8 @@ const searchAndUpdate = debounce( async (query, find) => {
     const num = search.results.length;
     resultnum.textContent = `Results Found (${num})`;
     // add new result
-    for( const result of search.results) {
+    if(num >=1){
+        for( const result of search.results) {
         const data = await result.data()
         document.querySelector('#results').innerHTML += `
         <div>
@@ -200,6 +201,12 @@ const searchAndUpdate = debounce( async (query, find) => {
             <p>${data.excerpt}</p>
             </a>
         </div>`
+    }
+    } else{
+        document.querySelector('#results').innerHTML = `
+        <span class="notresultfound"> No Result Found </span>
+        `
+        ;
     }
     } else {
         document.querySelector('.resultnum').textContent = '';
