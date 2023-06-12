@@ -123,6 +123,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 98', name: 'mq98', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 99', name: 'mq99', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
+      - { label: 'Blog post content', name: 'body', widget: 'markdown' }
   - name: 'chemistry' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Chemistry Test' # Used in the UI, ie.: "New Post"
     slug: '{{testDate}}-{{syllabus}}'
