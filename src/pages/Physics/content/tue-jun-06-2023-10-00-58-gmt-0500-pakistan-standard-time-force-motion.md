@@ -111,6 +111,3 @@ mq98: "-"
 mq99: "-"
 mq100: "-"
 ---
-![test](/Images/Tests/05-06-23-1-bio.webp "test")
-
-t﻿esting stuff
