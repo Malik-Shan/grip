@@ -6,10 +6,10 @@ For CMS: Sr.2 T2(A) Biomolecules + Enzymes 07-06-23
 syllabus: Biomolecules + Enzymes
 series: "2"
 test: 2(A)
-imgSrc1: /Images/Tests/07-06-23-1-bio.webp
-imgSrc2: /Images/Tests/07-06-23-2-bio.webp
-imgSrc3: /Images/Tests/07-06-23-3-bio.webp
-imgSrc4: ""
+Images:
+    - /Images/Tests/07-06-23-1-bio.webp
+    - /Images/Tests/07-06-23-2-bio.webp
+    - /Images/Tests/07-06-23-3-bio.webp
 mq1: 1(D)
 mq2: 2(A)
 mq3: 3(C)

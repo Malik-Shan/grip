@@ -6,10 +6,9 @@ For CMS: Sr.2 T2(B) Verbs-II 08-06-23
 syllabus: Verbs-II
 series: "2"
 test: 2(B)
-imgSrc1: /Images/Tests/08-06-23-1-eng.webp
-imgSrc2: /Images/Tests/08-06-23-2-eng.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/08-06-23-1-eng.webp
+    - /Images/Tests/08-06-23-2-eng.webp
 mq1: 51(B)
 mq2: 52(D)
 mq3: 53(D)

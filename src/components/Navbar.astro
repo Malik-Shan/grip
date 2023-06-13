@@ -73,6 +73,7 @@ const searchAndUpdate = debounce( async (query, find) => {
 
     // Give results number
     const resultnum = document.querySelector('.resultnum');
+    
     const num = search.results.length;
     resultnum.textContent = `Results Found (${num})`;
     // add new result
@@ -83,7 +84,7 @@ const searchAndUpdate = debounce( async (query, find) => {
         <div>
             <a href="${data.url}">
             <h3>${data.meta.title}</h3>
-            <img src="${data.meta.image}" style="width:30px;">
+            <img src="${data.meta.image[0]}" style="width:30px;">
             <p>${data.excerpt}</p>
             </a>
         </div>`

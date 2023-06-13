@@ -6,10 +6,9 @@ For CMS: Sr.2 T4(A) Chemical Equilibrium 12-06-23
 syllabus: Chemical Equillibrium
 series: "2"
 test: 4(A)
-imgSrc1: /Images/Tests/12-06-23-1-chem.webp
-imgSrc2: /Images/Tests/12-06-23-2-chem.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/12-06-23-1-chem.webp
+    - /Images/Tests/12-06-23-2-chem.webp
 mq1: 1(B)
 mq2: 2(A)
 mq3: 3(B)

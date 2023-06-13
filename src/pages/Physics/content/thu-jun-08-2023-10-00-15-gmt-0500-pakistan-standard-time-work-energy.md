@@ -6,10 +6,10 @@ For CMS: Sr.2 T2(B) Work & Energy 08-06-23
 syllabus: Work & Energy
 series: "2"
 test: 2(B)
-imgSrc1: /Images/Tests/08-06-23-1-phy.webp
-imgSrc2: /Images/Tests/08-06-23-2-phy.webp
-imgSrc3: /Images/Tests/08-06-23-3-phy.webp
-imgSrc4: ""
+Images:
+    - /Images/Tests/08-06-23-1-phy.webp
+    - /Images/Tests/08-06-23-2-phy.webp
+    - /Images/Tests/08-06-23-3-phy.webp
 mq1: 1(C)
 mq2: 2(D)
 mq3: 3(C)

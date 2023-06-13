@@ -1,12 +1,12 @@
 ---
 const {frontmatter , url} = Astro.props;
-const {subject, testDate, imgSrc1, series,test, syllabus} = frontmatter;
+const {subject, testDate, Images, series,test, syllabus} = frontmatter;
 import {formatDate} from '../Javascript/util';
 
 ---
 <div class="post card sub_tag" data-sub={subject} data-date={formatDate(testDate)}>
     <a href={url} class="post_link noto">
-        <img src={imgSrc1} alt={`${subject} - ${syllabus} Paper Image`} title={`${subject} - ${syllabus} Paper Image`}>
+        <img src={Images[0]} alt={`${subject} - ${syllabus} Paper Image`} title={`${subject} - ${syllabus} Paper Image`}>
     </a>
     <h4 class="post_title" title={`${subject} - ${syllabus} (Series - ${series})`}>
         <a href={url} class="post_link">

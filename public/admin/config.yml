@@ -19,10 +19,11 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - { label: "Image # 1", name: 'imgSrc1', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 2", name: 'imgSrc2', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 3", name: 'imgSrc3', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 4", name: 'imgSrc4', widget: 'image', required: false, default: ""  }
+      - label: "Test Images"
+        name: "Images"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - { label: 'MCQ # 1', name: 'mq1', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 2', name: 'mq2', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 3', name: 'mq3', widget: 'string', required: false, default: '-' }
@@ -135,11 +136,11 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'CMS File Name', name: 'For CMS', widget: 'string', hint: 'Sr.2 T1(A) Basic Concepts 06-05-23'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
-      - { label: "Test #", name: "test" , widget: string}
-      - { label: "Image # 1", name: 'imgSrc1', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 2", name: 'imgSrc2', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 3", name: 'imgSrc3', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 4", name: 'imgSrc4', widget: 'image', required: false, default: ""  }
+      - label: "Test Images"
+        name: "Images"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - { label: 'MCQ # 1', name: 'mq1', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 2', name: 'mq2', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 3', name: 'mq3', widget: 'string', required: false, default: '-' }
@@ -253,10 +254,11 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - { label: "Image # 1", name: 'imgSrc1', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 2", name: 'imgSrc2', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 3", name: 'imgSrc3', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 4", name: 'imgSrc4', widget: 'image', required: false, default: ""  }
+      - label: "Test Images"
+        name: "Images"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - { label: 'MCQ # 1', name: 'mq1', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 2', name: 'mq2', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 3', name: 'mq3', widget: 'string', required: false, default: '-' }
@@ -370,10 +372,11 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - { label: "Image # 1", name: 'imgSrc1', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 2", name: 'imgSrc2', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 3", name: 'imgSrc3', widget: 'image', required: false, default: ""  }
-      - { label: "Image # 4", name: 'imgSrc4', widget: 'image', required: false, default: ""  }
+      - label: "Test Images"
+        name: "Images"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - { label: 'MCQ # 1', name: 'mq1', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 2', name: 'mq2', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 3', name: 'mq3', widget: 'string', required: false, default: '-' }
@@ -474,14 +477,5 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'MCQ # 98', name: 'mq98', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 99', name: 'mq99', widget: 'string', required: false, default: '-' }
       - { label: 'MCQ # 100', name: 'mq100', widget: 'string', required: false, default: '-' }
-  - name: 'data' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Data' # Used in the UI, ie.: "New Post"
-    slug: 'data'
-    extension: "json"
-    format: "json"
-    folder: 'public' # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: 'Data', name: 'jsondata', widget: 'text'}
 
       

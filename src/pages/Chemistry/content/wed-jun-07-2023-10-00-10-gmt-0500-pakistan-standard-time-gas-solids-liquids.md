@@ -6,10 +6,9 @@ For CMS: Sr.2 T2(A) Gas, Solids & Liquids 07-06-23
 syllabus: Gas, Solids & Liquids
 series: "2"
 test: 2(A)
-imgSrc1: /Images/Tests/07-06-23-1-chem.webp
-imgSrc2: /Images/Tests/07-06-23-2-chem.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/07-06-23-1-chem.webp
+    - /Images/Tests/07-06-23-2-chem.webp
 mq1: 61(C)
 mq2: 62(D)
 mq3: 63(D)

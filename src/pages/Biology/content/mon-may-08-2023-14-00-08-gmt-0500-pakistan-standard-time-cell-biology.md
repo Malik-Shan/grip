@@ -6,10 +6,9 @@ For CMS: " Sr.1 T1(A) Cell Biology 08-05-23"
 syllabus: Cell Biology
 series: "1"
 test: 1(A)
-imgSrc1: /Images/Tests/08-05-23-1-bio-.webp
-imgSrc2: /Images/Tests/08-05-23-2-bio-.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/08-05-23-1-bio-.webp
+    - /Images/Tests/08-05-23-2-bio-.webp
 mq1: 36(D)
 mq2: 37(A)
 mq3: 38(D)

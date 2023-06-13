@@ -6,10 +6,9 @@ For CMS: Sr.2 T1(A) Basic Concepts 05-06-23
 syllabus: Basic Concepts
 series: "2"
 test: 1(A)
-imgSrc1: /Images/Tests/05-06-23-1-chem.webp
-imgSrc2: /Images/Tests/05-06-23-2-chem.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/05-06-23-1-chem.webp
+    - /Images/Tests/05-06-23-2-chem.webp
 mq1: 61(A)
 mq2: 62(B)
 mq3: 63(D)

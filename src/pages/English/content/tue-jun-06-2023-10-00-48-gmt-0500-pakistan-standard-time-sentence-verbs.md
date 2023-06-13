@@ -6,10 +6,9 @@ For CMS: Sr.2 T1(B) Sentence + Verbs 06-06-23
 syllabus: Sentence + Verbs
 series: "2"
 test: 1(B)
-imgSrc1: /Images/Tests/06-06-23-1-eng.webp
-imgSrc2: /Images/Tests/06-06-23-2-eng.webp
-imgSrc3: ""
-imgSrc4: ""
+Images:
+    - /Images/Tests/06-06-23-1-eng.webp
+    - /Images/Tests/06-06-23-2-eng.webp
 mq1: 46(C)
 mq2: 47(A)
 mq3: 48(D)

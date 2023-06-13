@@ -6,10 +6,10 @@ For CMS: Sr.2 T1(B) Force & Motion 06-06-23
 syllabus: Force & Motion
 series: "2"
 test: 1(B)
-imgSrc1: /Images/Tests/06-06-23-1-phy.webp
-imgSrc2: /Images/Tests/06-06-23-2-phy.webp
-imgSrc3: /Images/Tests/06-06-23-3-phy.webp
-imgSrc4: ""
+Images:
+    - /Images/Tests/06-06-23-1-phy.webp
+    - /Images/Tests/06-06-23-2-phy.webp
+    - /Images/Tests/06-06-23-3-phy.webp
 mq1: 1(A)
 mq2: 2(D)
 mq3: 3(A)
