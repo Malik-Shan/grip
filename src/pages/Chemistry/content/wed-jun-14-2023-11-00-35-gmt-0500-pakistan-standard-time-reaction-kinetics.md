@@ -5,6 +5,7 @@ testDate: 2023-06-14T06:00:35.123Z
 For CMS: Sr.2 T5(A) Reaction Kinetics 14-06-23
 syllabus: Reaction Kinetics
 series: "2"
+test: 5(A)
 Images:
   - /Images/Tests/14-06-23-1-chem.webp
   - /Images/Tests/14-06-23-2-chem.webp
