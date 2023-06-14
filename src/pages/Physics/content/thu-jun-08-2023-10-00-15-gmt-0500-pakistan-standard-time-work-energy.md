@@ -7,9 +7,9 @@ syllabus: Work & Energy
 series: "2"
 test: 2(B)
 Images:
-    - /Images/Tests/08-06-23-1-phy.webp
-    - /Images/Tests/08-06-23-2-phy.webp
-    - /Images/Tests/08-06-23-3-phy.webp
+  - /Images/Tests/08-06-23-1-phy.webp
+  - /Images/Tests/08-06-23-2-phy.webp
+  - /Images/Tests/08-06-23-3-phy.webp
 mq1: 1(C)
 mq2: 2(D)
 mq3: 3(C)
@@ -42,7 +42,7 @@ mq29: 29(D)
 mq30: 30(D)
 mq31: 31(A)
 mq32: 32(D)
-mq33: 33(F not fiven)
+mq33: 33(F not given)
 mq34: 34(C)
 mq35: 35(B)
 mq36: 36(B)
