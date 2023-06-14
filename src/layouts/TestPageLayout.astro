@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import EventDate from '../components/EventDate.astro';
 
 const {frontmatter} = Astro.props;
-const {subject, syllabus, Images, series} = frontmatter;
+const {subject, syllabus, Images, series, mcqs} = frontmatter;
 const {mq1, mq2, mq3, mq4, mq5, mq6, mq7, mq8, mq9, mq10, mq11, mq12, mq13, mq14,
 mq15, mq16, mq17, mq18, mq19, mq20, mq21, mq22,mq23,mq24,mq25,mq26,mq27,mq28,mq29,mq30,
 mq31,mq32,mq33,mq34,mq35,mq36,mq37,mq38,mq39,mq40,mq41,mq42,mq43,mq44,mq45,mq46,mq47,mq48,mq49,mq50,
@@ -39,7 +39,11 @@ mq91,mq92,mq93,mq94,mq95,mq96,mq97,mq98,mq99,mq100} = frontmatter;
             <slot />
             <table class="anstbl" data-pagefind-ignore="all">
                 <tr>
-                    <td class="opt">{mq1}</td>
+                    {
+                        mcqs.map((mcq) =>(
+                        <td class="opt">{mcq}</td>
+                        ))
+                    }
                 </tr>
             </table>
         </section>
