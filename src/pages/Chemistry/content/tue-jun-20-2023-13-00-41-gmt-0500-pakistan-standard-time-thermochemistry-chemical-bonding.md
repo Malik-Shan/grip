@@ -9,4 +9,6 @@ test: 7(A)
 Images:
   - /Images/Tests/20-06-23-1-chem.webp
   - /Images/Tests/20-06-24-2-chem.webp
+mcqs:
+  - 61(B)
 ---
