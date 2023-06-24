@@ -8,4 +8,6 @@ series: "2"
 test: test
 Images:
   - /Images/Tests/05-06-23-1-chem.webp
+mcqs:
+  - "1"
 ---
