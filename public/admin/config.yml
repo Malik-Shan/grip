@@ -37,20 +37,20 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Chemistry"}
-      - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: "Test's Date", name: 'testDate', widget: 'date' }
       - { label: 'CMS File Name', name: 'For CMS', widget: 'string', hint: 'Sr.2 T1(A) Basic Concepts 06-05-23'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - label: "Test Images"
+       - label: "Test Images"
         name: "Images"
         widget: "list"
-        summary: '{{fields.image}}'
+        default: [""]
         field: {label: Image, name: image, widget: image}
       - label: "MCQs"
         name: "mcqs"
         widget: "list"
-        summary: '{{fields.mcq}}'
+        default: [""]
         field: {label: MCQ, name: mcq, widget: string}
   - name: 'biology' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Biology Test' # Used in the UI, ie.: "New Post"
@@ -60,20 +60,20 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "Biology"}
-      - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: "Test's Date", name: 'testDate', widget: 'date' }
       - { label: 'CMS File Name', name: 'For CMS', widget: 'string', hint: 'Sr.2 T1(A) Basic Concepts 06-05-23'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - label: "Test Images"
+       - label: "Test Images"
         name: "Images"
         widget: "list"
-        summary: '{{fields.image}}'
+        default: [""]
         field: {label: Image, name: image, widget: image}
       - label: "MCQs"
         name: "mcqs"
         widget: "list"
-        summary: '{{fields.mcq}}'
+        default: [""]
         field: {label: MCQ, name: mcq, widget: string}
   - name: 'english' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'English Test' # Used in the UI, ie.: "New Post"
@@ -83,20 +83,20 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - {label: "Subject", name: "subject", widget: "hidden", default: "English"}
-      - { label: "Test's Date", name: 'testDate', widget: 'datetime' }
+      - { label: "Test's Date", name: 'testDate', widget: 'date' }
       - { label: 'CMS File Name', name: 'For CMS', widget: 'string', hint: 'Sr.2 T1(A) Basic Concepts 06-05-23'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-      - label: "Test Images"
+       - label: "Test Images"
         name: "Images"
         widget: "list"
-        summary: '{{fields.image}}'
+        default: [""]
         field: {label: Image, name: image, widget: image}
       - label: "MCQs"
         name: "mcqs"
         widget: "list"
-        summary: '{{fields.mcq}}'
+        default: [""]
         field: {label: MCQ, name: mcq, widget: string}
 
       
