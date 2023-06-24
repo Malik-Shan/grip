@@ -6,4 +6,10 @@ For CMS: cms name
 syllabus: syllabus
 series: "series #"
 test: "test #"
+Images:
+  - /Images/Tests/19-06-23-1-phy.webp
+  - /Images/Tests/19-06-23-2-phy.webp
+mcqs:
+  - 1(A)
+  - 2(B)
 ---
