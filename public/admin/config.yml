@@ -14,7 +14,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/TestPageLayout.astro"}
       - { label: "Subject", name: "subject", widget: "hidden", default: "Physics"}
-      - { label: "Test's Date", name: 'testDate', widget: 'date' }
+      - { label: "Test's Date", name: 'testDate', widget: 'date', time_format: 'true' }
       - { label: 'CMS File Name', name: 'For CMS', widget: 'string', hint: 'Sr.2 T1(A) Basic Concepts 06-05-23'}
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
