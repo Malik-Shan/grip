@@ -119,14 +119,3 @@ const searchModalOpen = document.querySelector('.fsb');
             }
         })
     })
-
-    
-    
-// window.addEventListener('keydown', (e)=>{
-//     const modal = document.querySelector('.searchModal');
-//     modal.hasAttribute('open');
-//     if(e.key === '/' && modal.getAttribute('aria-hidden') === 'true'){
-//         modal.showModal();
-//         modal.setAttribute('aria-hidden', 'false');
-//     }
-// })

@@ -51,7 +51,8 @@
 </header>
 
 <script is:inline>
-    const searchInput = document.querySelector('#search');
+        // Page find script
+const searchInput = document.querySelector('#search');
 
 searchInput.addEventListener('input', async (e) => {
     
@@ -114,5 +115,5 @@ function debounce(cb, delay = 1000){
       cb(...arg)
     }, delay)
   }
-}
+};
 </script>
