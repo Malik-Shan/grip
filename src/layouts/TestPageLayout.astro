@@ -24,7 +24,7 @@ const {subject, syllabus, Images, series, mcqs} = frontmatter;
 
         <section class="paper_section  container">
             <div class="ppr_imgs">
-                {
+                { Images !== undefined &&
                     Images.map((img, index) =>(
                     <img data-pagefind-meta={index === 0 && 'image[src]'} src={img} alt={`${subject} - ${syllabus} (Series - ${series}) `}>
                     ))
@@ -33,7 +33,7 @@ const {subject, syllabus, Images, series, mcqs} = frontmatter;
             <slot />
             <table class="anstbl" data-pagefind-ignore="all">
                 <tr>
-                    {
+                    { mcqs !== undefined &&
                         mcqs.map((mcq) =>(
                         <td class="opt">{mcq}</td>
                         ))
