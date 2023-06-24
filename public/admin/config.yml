@@ -22,12 +22,12 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Test Images"
         name: "Images"
         widget: "list"
-        defualt: [img]
+        defualt: ["img"]
         field: {label: Image, name: image, widget: image}
       - label: "MCQs"
         name: "mcqs"
         widget: "list"
-        default: [mcq]
+        default: ["mcq"]
         field: {label: MCQ, name: mcq, widget: string}
   - name: 'chemistry' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Chemistry Test' # Used in the UI, ie.: "New Post"
