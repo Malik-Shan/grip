@@ -65,7 +65,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-       - label: "Test Images"
+      - label: "Test Images"
         name: "Images"
         widget: "list"
         default: [""]
@@ -88,7 +88,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Syllabus", name: 'syllabus', widget: 'string'}
       - { label: "Series", name: 'series', widget: 'string' }
       - { label: "Test #", name: "test" , widget: string}
-       - label: "Test Images"
+      - label: "Test Images"
         name: "Images"
         widget: "list"
         default: [""]
