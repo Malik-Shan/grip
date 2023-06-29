@@ -55,4 +55,9 @@ mcqs:
   - 93(B)
   - 94(D)
   - 95(D)
+testimonials:
+  - quote: test quote
+    author:
+      name: test name field 2
+      avatar: /Images/Tests/05-06-23-1-bio.webp
 ---
