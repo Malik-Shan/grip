@@ -60,4 +60,8 @@ testimonials:
     author:
       name: test name field 2
       avatar: /Images/Tests/05-06-23-1-bio.webp
+  - quote: test quote 2
+    author:
+      name: test name field 2 2
+      avatar: /Images/Tests/05-06-23-1-bio.webp
 ---
