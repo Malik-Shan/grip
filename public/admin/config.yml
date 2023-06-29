@@ -29,18 +29,6 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         default: [""]
         field: {label: MCQ, name: mcq, widget: string}
-      - label: "Testimonials"
-        name: "testimonials"
-        widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
-        fields:
-          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-          - label: Author
-            name: author
-            widget: object
-            fields:
-              - {label: Name, name: name, widget: string, default: "Emmet"}
-              - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
   - name: 'chemistry' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Chemistry Test' # Used in the UI, ie.: "New Post"
     slug: '{{testDate}}-{{syllabus}}'
@@ -64,6 +52,18 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         default: [""]
         field: {label: MCQ, name: mcq, widget: string}
+      - label: "Testimonials"
+        name: "testimonials"
+        widget: "list"
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+          - label: Author
+            name: author
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string, default: "Emmet"}
+              - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
   - name: 'biology' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Biology Test' # Used in the UI, ie.: "New Post"
     slug: '{{testDate}}-{{syllabus}}'
