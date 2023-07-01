@@ -64,4 +64,12 @@ testimonials:
     author:
       name: test name field 2 2
       avatar: /Images/Tests/05-06-23-1-bio.webp
+profile:
+  birthdate: 07/04/2023
+  name: name
+  address:
+    street: street
+    city: city
+    post-code: postal code
+  public: true
 ---
