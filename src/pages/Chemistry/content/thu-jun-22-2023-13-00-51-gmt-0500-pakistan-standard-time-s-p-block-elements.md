@@ -72,4 +72,6 @@ profile:
     city: city
     post-code: postal code
   public: true
+puppies: 3
+pup2: 4
 ---
